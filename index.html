@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustrated Studio</title>
+<meta name="description" content="Illustrated Studio: apps sencillas y útiles. Creadores de CVoice, el currículum que se hace hablando.">
+<link rel="icon" href="cvoice-icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --tinta:#1F2A24; --musgo:#2F5D4F; --musgo-claro:#E4EFE9; --ambar:#D98B3F; --ambar-suave:#F3DDBC; --linea:#CFC6B2; --papel:#FAF6EE; --suave:#5E6A62; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--papel); color:var(--tinta); font:18px/1.6 'Atkinson Hyperlegible', system-ui, sans-serif; }
+  a{ color:var(--musgo); }
+  .envoltura{ max-width:880px; margin:0 auto; padding:0 20px; }
+  header{ padding:28px 0 8px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .marca{ font-family:'Fraunces', serif; font-weight:700; font-size:24px; color:var(--musgo); text-decoration:none; }
+  .idiomas button{ background:none; border:1px solid var(--linea); border-radius:999px; padding:4px 12px; font:inherit; font-size:14px; color:var(--suave); cursor:pointer; }
+  .idiomas button[aria-pressed="true"]{ background:var(--musgo); border-color:var(--musgo); color:#fff; }
+  .portada{ padding:48px 0 32px; }
+  h1{ font-family:'Fraunces', serif; font-size:clamp(34px, 6vw, 52px); line-height:1.1; margin:0 0 16px; color:var(--musgo); }
+  .portada p{ font-size:20px; color:var(--suave); max-width:620px; margin:0; }
+  .tarjeta{ display:grid; grid-template-columns:120px 1fr; gap:28px; align-items:center; background:#fff; border:1px solid var(--linea); border-radius:24px; padding:28px; margin:24px 0 48px; }
+  .tarjeta img{ width:120px; height:120px; border-radius:26px; }
+  .tarjeta h2{ font-family:'Fraunces', serif; margin:0 0 6px; font-size:28px; }
+  .tarjeta p{ margin:0 0 16px; color:var(--suave); }
+  .etiquetas{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .etiquetas span{ background:var(--musgo-claro); color:var(--musgo); border-radius:999px; padding:3px 12px; font-size:14px; font-weight:700; }
+  .boton{ display:inline-block; background:var(--ambar); color:#fff; text-decoration:none; font-weight:700; border-radius:999px; padding:12px 24px; }
+  .boton[aria-disabled="true"]{ background:var(--ambar-suave); color:#8a5a1f; }
+  footer{ border-top:1px solid var(--linea); padding:24px 0 40px; font-size:15px; color:var(--suave); display:flex; flex-wrap:wrap; gap:8px 24px; }
+  @media (max-width:560px){ .tarjeta{ grid-template-columns:1fr; text-align:left; } .tarjeta img{ width:88px; height:88px; border-radius:20px; } }
+  [data-en]{ display:none; } html[lang="en"] [data-es]{ display:none; } html[lang="en"] [data-en]{ display:revert; }
+</style>
+</head>
+<body>
+<div class="envoltura">
+  <header>
+    <a class="marca" href="./">Illustrated Studio</a>
+    <div class="idiomas" role="group" aria-label="Idioma / Language">
+      <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <section class="portada">
+    <h1 data-es>Apps sencillas para cosas importantes</h1>
+    <h1 data-en>Simple apps for things that matter</h1>
+    <p data-es>Diseñamos aplicaciones fáciles de usar, pensadas para cualquier persona, también para quien no se lleva bien con la tecnología.</p>
+    <p data-en>We design easy-to-use apps for everyone, including people who don't feel confident with technology.</p>
+  </section>
+
+  <article class="tarjeta">
+    <img src="cvoice-icono.png" alt="Icono de CVoice">
+    <div>
+      <h2>CVoice</h2>
+      <p data-es>Haz tu currículum hablando. Responde a 4 preguntas con tu voz y la IA redacta un CV profesional que descargas en PDF.</p>
+      <p data-en>Make your résumé just by talking. Answer 4 questions out loud and AI writes a professional CV you can download as a PDF.</p>
+      <div class="etiquetas">
+        <span data-es>13 idiomas</span><span data-en>13 languages</span>
+        <span data-es>5 diseños</span><span data-en>5 designs</span>
+        <span data-es>PDF A4</span><span data-en>A4 PDF</span>
+      </div>
+      <a class="boton" aria-disabled="true" data-es>Próximamente en Google Play</a>
+      <a class="boton" aria-disabled="true" data-en>Coming soon to Google Play</a>
+    </div>
+  </article>
+
+  <footer>
+    <span>© 2026 Illustrated Studio</span>
+    <a href="cvoice-privacidad.html" data-es>Privacidad de CVoice</a>
+    <a href="cvoice-privacidad.html#en" data-en>CVoice privacy policy</a>
+    <a href="privacy.html" data-es>Privacidad de Soundscape</a>
+    <a href="privacy.html" data-en>Soundscape privacy policy</a>
+    <a href="mailto:ilustraciones.ae@gmail.com">ilustraciones.ae@gmail.com</a>
+  </footer>
+</div>
+<script>
+  // Idioma: el del navegador (español o inglés) y lo que elija el visitante
+  function ponerIdioma(codigo){
+    document.documentElement.lang = codigo;
+    document.querySelectorAll(".idiomas button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.idioma === codigo)));
+  }
+  document.querySelectorAll(".idiomas button").forEach(b => b.addEventListener("click", () => ponerIdioma(b.dataset.idioma)));
+  ponerIdioma((navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
+</script>
+</body>
+</html>
